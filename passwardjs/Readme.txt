@@ -47,15 +47,19 @@ app.listen(3000,()=>{
 
 database.js :->
 =============
-const mongoose =require("mongoose");
+const mongoose = require("mongoose");  
 
-exports.connectMongoose =()=>{
-    mongoose.connect('mongodb://localhost:27017/passport')
-    .than(e=>console.log(`Connect to mongoDB:${e.connection.host}`))
-    .catch(e=>console.log(`Connect to mongoDB failed:${e}`
-
-));
-}
+exports.connectMongoose = () => {  
+    mongoose.connect('mongodb://localhost:27017/passport')  
+    .then(e => console.log(`Connected to MongoDB: ${e.connection.host}`))  
+    .catch(e => console.log(e));  
+};
 
 
 
+
+
+
+4. ==============================>
+Server.js :->
+==========
